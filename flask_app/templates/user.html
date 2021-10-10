@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>Hello User!</h1>
+{% endblock %}
+<hr>
+{% for cat, message in get_flashed_messages(True) %}
+<p class="{{cat}}">{{ message }}</p>
+
+{% endfor %}
